@@ -1,12 +1,12 @@
 package com.devp.reddit.mapper;
 
+import com.github.marlonlom.utilities.timeago.TimeAgo;
 import com.devp.reddit.dto.PostRequest;
 import com.devp.reddit.dto.PostResponse;
 import com.devp.reddit.model.*;
 import com.devp.reddit.repository.CommentRepository;
 import com.devp.reddit.repository.VoteRepository;
 import com.devp.reddit.service.AuthService;
-import com.github.marlonlom.utilities.timeago.TimeAgo;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,10 +21,8 @@ public abstract class PostMapper {
 
     @Autowired
     private CommentRepository commentRepository;
-
     @Autowired
     private VoteRepository voteRepository;
-
     @Autowired
     private AuthService authService;
 
@@ -71,4 +69,5 @@ public abstract class PostMapper {
         }
         return false;
     }
+
 }

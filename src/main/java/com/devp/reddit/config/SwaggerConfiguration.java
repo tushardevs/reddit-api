@@ -14,9 +14,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableSwagger2
 public class SwaggerConfiguration {
-
     @Bean
-    public Docket redditCloneApi(){
+    public Docket redditCloneApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.any())
@@ -25,12 +24,12 @@ public class SwaggerConfiguration {
                 .apiInfo(getApiInfo());
     }
 
-    public ApiInfo getApiInfo(){
+    private ApiInfo getApiInfo() {
         return new ApiInfoBuilder()
-                .title("Reddit Clone Api")
+                .title("Reddit Clone API")
                 .version("1.0.0")
                 .description("API for Reddit Clone Application")
-                .contact(new Contact("DEV","http://dev.com","dev@gmail.com"))
+                .contact(new Contact("Tushar Bhatnagar", "", "tusharbhatnagar053@gmail.com"))
                 .license("Apache License Version 2.0")
                 .build();
     }

@@ -19,7 +19,6 @@ import static java.util.Collections.singletonList;
 @Service
 @AllArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
-
     private final UserRepository userRepository;
 
     @Override
@@ -39,5 +38,4 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private Collection<? extends GrantedAuthority> getAuthorities(String role) {
         return singletonList(new SimpleGrantedAuthority(role));
     }
-
 }

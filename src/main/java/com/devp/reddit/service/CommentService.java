@@ -21,21 +21,13 @@ import static java.util.stream.Collectors.toList;
 @Service
 @AllArgsConstructor
 public class CommentService {
-
     private static final String POST_URL = "";
-
     private final PostRepository postRepository;
-
     private final UserRepository userRepository;
-
     private final AuthService authService;
-
     private final CommentMapper commentMapper;
-
     private final CommentRepository commentRepository;
-
     private final MailContentBuilder mailContentBuilder;
-
     private final MailService mailService;
 
     public void save(CommentsDto commentsDto) {

@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 @AllArgsConstructor
 @Slf4j
-public class MailService {
+class MailService {
 
     private final JavaMailSender mailSender;
     private final MailContentBuilder mailContentBuilder;
@@ -36,4 +36,5 @@ public class MailService {
             throw new SpringRedditException("Exception occurred when sending mail to " + notificationEmail.getRecipient(), e);
         }
     }
+
 }

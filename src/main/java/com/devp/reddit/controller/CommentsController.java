@@ -12,10 +12,9 @@ import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
-@AllArgsConstructor
 @RequestMapping("/api/comments/")
-public class CommentController {
-
+@AllArgsConstructor
+public class CommentsController {
     private final CommentService commentService;
 
     @PostMapping
@@ -35,4 +34,5 @@ public class CommentController {
         return ResponseEntity.status(OK)
                 .body(commentService.getAllCommentsForUser(userName));
     }
+
 }
